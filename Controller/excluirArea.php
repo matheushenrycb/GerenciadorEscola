@@ -3,7 +3,7 @@
 require __DIR__ . '\../vendor/autoload.php';
 //print_r($_POST);
 
-use \App\Model\Aluno;
+use \App\Model\Area;
 
 //validação do ID
 if(!isset($_GET['id'])or !is_numeric($_GET['id'])){
@@ -11,10 +11,10 @@ if(!isset($_GET['id'])or !is_numeric($_GET['id'])){
     exit;
 }
 
-// consultar aluno
- $obaluno = Aluno::getAluno($_GET['id']);
- //validar o aluno
- if(!$obaluno instanceof Aluno){
+// consultar area
+ $obarea = area::getArea($_GET['id']);
+ //validar o area
+ if(!$obarea instanceof area){
     header('location:/www.escola.com.br/?status=error');
     exit;
  }
@@ -22,10 +22,10 @@ if(!isset($_GET['id'])or !is_numeric($_GET['id'])){
 
 //Validação do POST
 if (isset($_POST['excluir'])) {
-    $obaluno->excluir();
-    header('location: index.php?status=success');
+    $obarea->excluir();
+    header('location: /www.escola.com.br/Controller/controllerArea.php?status=success');
     exit;
 }
 include __DIR__ . '\../View/header.php';
-include __DIR__ . '\../View/confirmaExcluir.php';
+include __DIR__ . '\../View/confirmaExcluirArea.php';
 include __DIR__ . '\../View/footer.php';

@@ -1,15 +1,15 @@
 <main>
   <div>
-    <h2 class="mt-3">Excluir Aluno</h2>
+    <h2 class="mt-3">Excluir Curso</h2>
 
     <form method="post">
 
       <div class="form-group">
-        <p>Você deseja realmente excluir o aluno <strong><?= $obaluno->nome ?></strong>?</p>
+        <p>Você deseja realmente excluir o curso <strong><?= $obcurso->nome ?></strong>?</p>
       </div>
 
       <div class="form-group">
-        <a href="/www.escola.com.br/Controller/controllerAluno.php">
+        <a href="/www.escola.com.br/Controller/controllerCurso.php">
           <button type="button" class="btn btn-success">Cancelar</button>
         </a>
 

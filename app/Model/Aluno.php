@@ -62,8 +62,7 @@ class Aluno
      */
     public function cadastrar()
     {
-        //definir data  copiar para instituicao
-       // $this->datacriacao = date('Y-m-d H:i:s');
+        
         // inserir aluno no banco
         $obDatabase = new Database('aluno');
         $this->id = $obDatabase->insert([
